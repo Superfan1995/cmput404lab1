@@ -1,10 +1,10 @@
 import requests
 
-###########################
-# Main code starts here
-###########################
+# third script
+response = requests.get('https://raw.githubusercontent.com/Superfan1995/cmput404lab1/main/lab1.py')
 
-#response = requests.get('https://github.com/Superfan1995', auth=('superfan1995', '13905359980'))
-#version = response.raw.version
+f = open("new_lab1.py", "w")
+f.write(response.text)
+f.close()
 
-print(requests.__version__)
+print(response.text)
